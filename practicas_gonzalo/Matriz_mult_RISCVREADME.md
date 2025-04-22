@@ -20,21 +20,24 @@ comprendiendo el manejo de memoria, bucles anidados y operaciones aritméticas d
   * Puedes imprimir los resultados usando una syscall.
 
 ## FUNCIONAMIENTO: <br/>
-Este código implementa la multiplicación de matrices usando: <br/>
-- **Tres bucles anidados**: <br/>
-  - **Externo (i)**: recorre las filas de la matriz **A**. <br/>
-  - **Intermedio (j)**: recorre las columnas de la matriz **B**. <br/>
-  - **Interno (k)**: realiza la suma acumulada de productos. <br/>
+- **Tres bucles anidados**:
+  - **Externo (i)**: recorre las filas de la matriz **A**.
+  - **Intermedio (j)**: recorre las columnas de la matriz **B**.
+  - **Interno (k)**: realiza la suma acumulada de productos.
 
-- La dirección de cada elemento se calcula como `i * 3 + j`, ya que cada fila tiene 3 columnas. <br/>
+- La dirección de cada elemento se calcula como `i * 3 + j`, ya que cada fila tiene 3 columnas.
 
-- En cada iteración del bucle interno se realiza el producto: <br/>
-<br/><br/><br/><br/>A[i][k] * B[k][j] <br/>
-  y se acumula el resultado en una variable temporal. <br/>
+- En cada iteración del bucle interno se realiza el producto:
+  ```
+  A[i][k] * B[k][j]
+  ```
+  y se acumula el resultado en una variable temporal.
 
-- Una vez finalizado el bucle interno, el valor acumulado se guarda en la posición correspondiente de la matriz **C**: <br/>
-<br/><br/><br/><br/>C[i][j] = ∑ A[i][k] * B[k][j] <br/>
+- Una vez finalizado el bucle interno, el valor acumulado se guarda en la posición correspondiente de la matriz **C**:
+  ```
+  C[i][j] = ∑ A[i][k] * B[k][j]
+  ```
 
-- Se utilizan registros temporales para cargar los valores desde memoria, multiplicarlos y luego almacenarlos. <br/>
+- Se utilizan registros temporales para cargar los valores desde memoria, multiplicarlos y luego almacenarlos.
 
 ## CAPTURA DE PANTALLA: <br/>
