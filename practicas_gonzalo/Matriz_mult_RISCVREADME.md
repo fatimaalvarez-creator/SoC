@@ -18,3 +18,4 @@ comprendiendo el manejo de memoria, bucles anidados y operaciones aritméticas d
 3. Utilizar registros temporales para acumuladores y direcciones de memoria.
 4. Visualizar los resultados:
   * Puedes imprimir los resultados usando una syscall.
+>>>>>>> 5b046567b15a67f47aab3f61923f5c1a4b7014db
