@@ -1,0 +1,71 @@
+.data
+# Matriz A: 3x3
+A:  .word 1, 2, 3
+    .word 4, 5, 6
+    .word 7, 8, 9
+
+# Matriz B: 3x3
+B:  .word 9, 8, 7
+    .word 6, 5, 4
+    .word 3, 2, 1
+
+# Matriz C: 3x3 (resultado)
+C:  .space 36   # 3x3 palabras = 9 x 4 bytes = 36 bytes
+
+.text
+.global _start
+_start:
+    li t0, 0              # i = 0 (fila A)
+outer_loop:
+    li t1, 0              # j = 0 (columna B)
+middle_loop:
+    li t2, 0              # k = 0 (para acumulación)
+    li t3, 0              # suma = 0
+
+inner_loop:
+    # Cálculo de A[i][k]
+    li t4, 3              # columnas de A
+    mul t5, t0, t4        # i * 3
+    add t5, t5, t2        # i*3 + k
+    slli t5, t5, 2        # desplazamiento en bytes
+    la t6, A
+    add t5, t5, t6
+    lw t7, 0(t5)          # t7 = A[i][k]
+
+    # Cálculo de B[k][j]
+    li t4, 3              # columnas de B
+    mul t8, t2, t4        # k * 3
+    add t8, t8, t1        # k*3 + j
+    slli t8, t8, 2
+    la t9, B
+    add t8, t8, t9
+    lw s0, 0(t8)          # s0 = B[k][j]
+
+    # Multiplicación y acumulación
+    mul s1, t7, s0
+    add t3, t3, s1        # suma += A[i][k] * B[k][j]
+
+    addi t2, t2, 1        # k++
+    li s2, 3
+    blt t2, s2, inner_loop
+
+    # Guardar C[i][j]
+    li t4, 3
+    mul s3, t0, t4
+    add s3, s3, t1        # offset = i*3 + j
+    slli s3, s3, 2
+    la s4, C
+    add s3, s3, s4
+    sw t3, 0(s3)
+
+    addi t1, t1, 1        # j++
+    li s5, 3
+    blt t1, s5, middle_loop
+
+    addi t0, t0, 1        # i++
+    li s6, 3
+    blt t0, s6, outer_loop
+
+# Fin del programa (bucle infinito o ecall si estás en entorno que soporta)
+end:
+    j end
