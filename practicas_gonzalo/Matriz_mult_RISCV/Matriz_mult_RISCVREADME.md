@@ -26,7 +26,9 @@ El programa comienza definiendo las matrices de entrada A y B en la sección de 
 
 Para realizar la multiplicación, el programa utiliza tres bucles anidados, siguiendo la fórmula matemática estándar:
 
-C[i][j] = suma(A[i][k] * B[k][j]) para k de 0 a 2
+```assembly
+    C[i][j] = suma(A[i][k] * B[k][j]) para k de 0 a 2
+```
 
 El bucle externo (i_loop) recorre las filas de la matriz A. Para cada fila i, un segundo bucle (j_loop) recorre las columnas de la matriz B. Para cada combinación (i,j), un tercer bucle interno (k_loop) calcula el producto punto entre la fila i de A y la columna j de B.
 
