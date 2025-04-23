@@ -303,8 +303,5 @@ Ajusta el puntero de pila para liberar el espacio reservado.
 ```
 Carga el código de syscall 10 (exit) en a7 y ejecuta la llamada al sistema para terminar el programa.
 
-En resumen, este código implementa la multiplicación de matrices 3x3 usando tres bucles anidados: el bucle externo recorre las filas de A, 
-el intermedio recorre las columnas de B, y el interno calcula el producto punto para cada elemento de C. Al final, la matriz C contendrá el resultado de A×B.
-
 ## CAPTURA DE PANTALLA: <br/>
 ![Captura de pantalla 2025-04-22 180851](https://github.com/user-attachments/assets/d326a193-9951-4b2a-99e0-d98fbf97e7ef)
