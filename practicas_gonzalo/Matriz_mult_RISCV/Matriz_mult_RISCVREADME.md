@@ -10,14 +10,14 @@ comprendiendo el manejo de memoria, bucles anidados y operaciones aritméticas d
 
 ## INSTRUCCIONES PARA EL DESARROLLO: <br/>
 1. Declarar las matrices A y B (3x3) en memoria: <br/>
-  * Puedes inicializar con valores constantes. <br/>
-  * Cada matriz puede almacenarse en una sección .data. <br/>
+ <br/> * Puedes inicializar con valores constantes. <br/>
+ <br/> * Cada matriz puede almacenarse en una sección .data. <br/>
 2. Implementar la multiplicación: <br/>
-  * Utilizar tres bucles anidados (para recorrer filas de A, columnas de B y acumulador de multiplicación).
-  * Guardar los resultados en una matriz C (también 3x3).
+ <br/> * Utilizar tres bucles anidados (para recorrer filas de A, columnas de B y acumulador de multiplicación).
+ <br/> * Guardar los resultados en una matriz C (también 3x3).
 3. Utilizar registros temporales para acumuladores y direcciones de memoria.
 4. Visualizar los resultados:
-  * Puedes imprimir los resultados usando una syscall.
+ <br/> * Puedes imprimir los resultados usando una syscall.
 
 ## FUNCIONAMIENTO: <br/>
 Este programa implementa la multiplicación de dos matrices 3x3 en lenguaje ensamblador RISC-V. El algoritmo sigue el enfoque clásico de multiplicación de matrices donde cada elemento de la matriz resultante se calcula como el producto punto de la fila correspondiente de la primera matriz y la columna correspondiente de la segunda matriz.
@@ -39,8 +39,7 @@ Una vez calculado el valor completo de C[i][j], el programa lo almacena en la po
 El acceso a los elementos de las matrices se realiza mediante aritmética de direcciones. Para acceder al elemento (i,j) de una matriz 3x3, el programa calcula el desplazamiento como (i*3 + j)*4, donde 3 es el número de columnas y 4 es el tamaño en bytes de cada elemento (palabra).
 
 Al finalizar, el programa restaura los registros que había guardado inicialmente y termina su ejecución. El resultado final es una matriz C que contiene el producto de las matrices A y B.
-
-Este código ejemplifica conceptos fundamentales de programación en lenguaje ensamblador como el manejo de memoria, bucles anidados, cálculo de direcciones y el uso eficiente de registros para operaciones matemáticas complejas.
+<br/>
 
 ## Explicación paso a paso del código
 ```assembly
@@ -302,6 +301,7 @@ Ajusta el puntero de pila para liberar el espacio reservado.
     ecall
 ```
 Carga el código de syscall 10 (exit) en a7 y ejecuta la llamada al sistema para terminar el programa.
+<br/>
 
 ## CAPTURA DE PANTALLA: <br/>
 ![Captura de pantalla 2025-04-22 180851](https://github.com/user-attachments/assets/d326a193-9951-4b2a-99e0-d98fbf97e7ef)
