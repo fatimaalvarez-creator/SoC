@@ -10,13 +10,13 @@ Este proyecto implementa un procesador **RISC-V** en arquitectura **single-cycle
 
 ---
 
-## 📦 Descripción de cada módulo
+## Descripción de cada módulo
 
 ### `single_cycle_RISCV.v`
 Módulo principal que interconecta todos los componentes del procesador.
 
 ### `single_cycle_RISCV_tb.v`
-Testbench para el módulo `single_cycle_RISCV`. Ggenera un reloj, simula 20 ciclos, y muestra la evolución del `PC`, la instrucción actual y el contenido de registros clave.
+Testbench para el módulo `single_cycle_RISCV`. Genera un reloj, simula 20 ciclos, y muestra la evolución del `PC`, la instrucción actual y el contenido de registros clave.
 
 ### `alu_decoder.v`
 Decodifica señales específicas (`funct3`, `funct7_5`, `op[5]`, y `alu_op`) para generar el código de control (`alu_control`) que selecciona la operación a realizar por la ALU. Incluye soporte para instrucciones tipo R y operaciones como `add`, `sub`, `and`, `or`, `slt`.
@@ -44,7 +44,7 @@ Testbench para el módulo `main_decoder`. Simula diferentes valores de `op` y ve
 
 ---
 
-## 📁 Archivos Adicionales
+## Archivo Adicional
 
 - `instructions.txt`: Archivo de texto que contiene las instrucciones a ser cargadas en la memoria de instrucciones (`instruction_memory`).
 
@@ -54,7 +54,7 @@ Testbench para el módulo `main_decoder`. Simula diferentes valores de `op` y ve
 ## Diagrama del camino de datos completo.
 El camino de datos del procesador RISC-V de un solo ciclo implementa todos los componentes necesarios para ejecutar una instrucción en un solo ciclo de reloj. El diseño incluye:
 
-* PC (Program Counter): Registra la dirección de la siguiente instrucción a ejecutar.
+* # PC (Program Counter): # Registra la dirección de la siguiente instrucción a ejecutar.
 * Instruction Memory: Devuelve la instrucción codificada en la dirección especificada por el PC.
 * Register File: Lee dos registros fuente y escribe un registro destino.
 * Unidad de Control (Control Unit): Genera señales de control basadas en el opcode y los campos de función de la instrucción.
@@ -128,7 +128,7 @@ El camino de datos del procesador RISC-V de un solo ciclo implementa todos los c
 
 ---
 
-## 🧪 Evidencia de Simulación
+## Evidencia de Simulación
 
 
 ## Conclusión
