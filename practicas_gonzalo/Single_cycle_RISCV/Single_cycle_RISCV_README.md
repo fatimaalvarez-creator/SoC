@@ -112,10 +112,6 @@ El camino de datos del procesador RISC-V de un solo ciclo implementa todos los c
                         | Write Back to Reg File   |
                         +--------------------------+
 
-
-
-![alt text](diagrama.png)
-
 ---
 
 ## Evidencia de Simulación
