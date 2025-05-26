@@ -54,7 +54,7 @@ Testbench para el módulo `main_decoder`. Simula diferentes valores de `op` y ve
 ## Diagrama del camino de datos completo.
 El camino de datos del procesador RISC-V de un solo ciclo implementa todos los componentes necesarios para ejecutar una instrucción en un solo ciclo de reloj. El diseño incluye:
 
-* # PC (Program Counter): # Registra la dirección de la siguiente instrucción a ejecutar.
+* PC (Program Counter): Registra la dirección de la siguiente instrucción a ejecutar.
 * Instruction Memory: Devuelve la instrucción codificada en la dirección especificada por el PC.
 * Register File: Lee dos registros fuente y escribe un registro destino.
 * Unidad de Control (Control Unit): Genera señales de control basadas en el opcode y los campos de función de la instrucción.
@@ -125,6 +125,7 @@ El camino de datos del procesador RISC-V de un solo ciclo implementa todos los c
                      | to Reg File |
                      +-------------+
 
+![alt text](diagrama.png)
 
 ---
 
@@ -132,5 +133,4 @@ El camino de datos del procesador RISC-V de un solo ciclo implementa todos los c
 
 
 ## Conclusión
-El procesador es capaz de ejecutar instrucciones tipo R, I, S, B y J.
-La simulación confirma el correcto flujo de datos y control.
+El procesador single-cycle RISC-V representa una arquitectura fundamental para comprender el funcionamiento interno de una CPU. A través de la implementación modular de componentes como la unidad de control, la ALU, las memorias de instrucciones y datos, los registros y los multiplexores, se logra un flujo de datos claro y secuencial en cada ciclo de reloj. Aunque este diseño no es el más eficiente en términos de rendimiento para aplicaciones reales, su simplicidad permite una visión completa del ciclo de ejecución de una instrucción. Además, las simulaciones verifican que el camino de datos y la lógica de control operan correctamente, reforzando los conceptos de diseño digital y arquitectura de computadoras. Esta implementación sirve como base sólida para avanzar hacia arquitecturas más complejas como multi-cycle o pipelined processors.
