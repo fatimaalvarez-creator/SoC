@@ -1,4 +1,4 @@
-# Implementación de Procesador RISC-V Single-cyle
+# Implementación de Procesador RISC-V Single-cycle
 
 Fátima Álvarez Nuño <br/>
 A01645815 <br/>
