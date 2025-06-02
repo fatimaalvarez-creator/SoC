@@ -3,7 +3,7 @@
 Este repositorio contiene los proyectos, prácticas y recursos desarrollados durante el curso de **System on Chip (SoC)**. El objetivo de esta materia es diseñar, implementar y probar sistemas embebidos complejos en un solo chip, integrando módulos de procesamiento, control, comunicación y periféricos.
 
 ## 📚 Contenido del repositorio
-`
+```
 SoC/
 ├── README.md                                  <- README principal del repositorio
 └── practicas_gonzalo/                         <- Directorio para las prácticas
@@ -29,7 +29,7 @@ SoC/
         ├── register_file.v                    <- Módulo del Archivo de Registros
         ├── single_cycle_RISCV.v               <- Módulo principal del procesador de ciclo único
         └── single_cycle_RISCV_tb.v            <- Testbench para el procesador de ciclo único
-`
+```
 
 ## 🛠️ Tecnologías y herramientas
 
