@@ -150,6 +150,6 @@ Aquí se muestra una captura de pantalla de la simulación Verilog, evidenciando
 
 ## 📝 Conclusión
 
-La implementación de este procesador RISC-V de ciclo único es fundamental para comprender las bases de la arquitectura de computadoras. A través de la modularización y la interconexión de componentes clave (unidad de control, ALU, memorias, registros, multiplexores), se logra un flujo de datos secuencial y predecible en cada ciclo de reloj.
+La implementación de este procesador RISC-V de single-cycle es fundamental para comprender las bases de la arquitectura de computadoras. A través de la modularización y la interconexión de componentes clave (unidad de control, ALU, memorias, registros, multiplexores), se logra un flujo de datos secuencial y predecible en cada ciclo de reloj.
 
 Aunque el diseño single-cycle no es el más óptimo en términos de rendimiento para aplicaciones reales, su simplicidad permite una visión clara y completa del ciclo de ejecución de una instrucción. Las simulaciones realizadas confirman que el camino de datos y la lógica de control operan correctamente, consolidando los conceptos de diseño digital. Esta implementación sirve como una base sólida para explorar arquitecturas más avanzadas, como los procesadores multi-cycle o pipelined.
